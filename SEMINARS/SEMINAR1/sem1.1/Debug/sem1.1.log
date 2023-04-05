@@ -1,0 +1,4 @@
+﻿  sem1.1.cpp
+C:\Users\peter\BMSTU\BMSTU_CPP\SEM1\sem1.1\sem1.1.cpp(4,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\peter\BMSTU\BMSTU_CPP\SEM1\sem1.1\sem1.1.cpp(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  sem1.1.vcxproj -> C:\Users\peter\BMSTU\BMSTU_CPP\SEM1\sem1.1\Debug\sem1.1.exe

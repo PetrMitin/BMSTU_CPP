@@ -1,0 +1,114 @@
+object Form1: TForm1
+  Left = 994
+  Height = 467
+  Top = 235
+  Width = 495
+  Caption = 'Form1'
+  ClientHeight = 0
+  ClientWidth = 0
+  DesignTimePPI = 120
+  LCLVersion = '2.2.2.0'
+  object StringGrid1: TStringGrid
+    Left = 16
+    Height = 416
+    Top = 56
+    Width = 512
+    ColCount = 6
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 0
+    Cells = (
+      6
+      0
+      0
+      '№'
+      1
+      0
+      'Стадион'
+      2
+      0
+      'Команда 1'
+      3
+      0
+      'Команда 2'
+      4
+      0
+      'Счёт 1'
+      5
+      0
+      'Счёт 2'
+    )
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 31
+    Top = 608
+    Width = 294
+    Caption = 'Удалить матч с номером'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 16
+    Height = 31
+    Top = 544
+    Width = 294
+    Caption = 'Добавить матч'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button4: TButton
+    Left = 16
+    Height = 31
+    Top = 672
+    Width = 294
+    Caption = 'Показать матчи заданной команды'
+    OnClick = Button4Click
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 16
+    Height = 31
+    Top = 736
+    Width = 294
+    Caption = 'Показать ничейные матчи'
+    OnClick = Button3Click
+    TabOrder = 4
+  end
+  object Button5: TButton
+    Left = 16
+    Height = 31
+    Top = 797
+    Width = 294
+    Caption = 'Фильтр команд по количеству побед'
+    OnClick = Button5Click
+    TabOrder = 5
+  end
+  object Button6: TButton
+    Left = 16
+    Height = 31
+    Top = 488
+    Width = 294
+    Caption = 'Показать все матчи'
+    OnClick = Button6Click
+    TabOrder = 6
+  end
+  object Button7: TButton
+    Left = 16
+    Height = 31
+    Top = 912
+    Width = 294
+    Caption = 'Закрыть'
+    OnClick = Button7Click
+    TabOrder = 7
+  end
+  object Button8: TButton
+    Left = 16
+    Height = 31
+    Top = 856
+    Width = 294
+    Caption = 'Гистограмма по стадионам'
+    OnClick = Button8Click
+    TabOrder = 8
+  end
+end
