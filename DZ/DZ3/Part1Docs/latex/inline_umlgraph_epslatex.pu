@@ -1,0 +1,37 @@
+@startuml inline_umlgraph_2.eps
+    class Letter {
+        +senderAddress
+        +receiverAddress
+        +weight
+        +Letter()
+        +Letter(const char* _senderAddress, const char* _receiverAddress, float _weight)
+        +Letter(const Letter& initial)
+        +virtual ~Letter()
+        +Letter& operator =(const Letter& initial)
+        +virtual void printInfo()
+        +virtual float getDeliveryPrice()
+    }
+
+    class ValuableLetter {
+        +price
+        +ValuableLetter()
+        +ValuableLetter(const char* _senderAddress, const char* _receiverAddress, float _weight, float _price)
+        +ValuableLetter(const ValuableLetter& initial)
+        +ValuableLetter& operator =(const ValuableLetter& initial)
+        +void printInfo() override
+        +float getAdditionalPayment()
+        +float getDeliveryPrice() override
+    }
+
+    class MailBox {
+        +vector<ValuableLetter> arr
+        +len
+        +MailBox(std::vector<ValuableLetter*> _arr, int len)
+        +~MailBox()
+        +void printLettersInfo()
+        +float getFullPrice()
+    }
+
+    Letter <|-- ValuableLetter
+    MailBox o-- ValuableLetter
+@enduml

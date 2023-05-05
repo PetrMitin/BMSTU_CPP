@@ -1,0 +1,67 @@
+\hypertarget{classes_8h_source}{}\doxysection{classes.\+h}
+\mbox{\hyperlink{classes_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLASSES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLASSES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_letter}{Letter}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_letter_abbfd18b90e2a07cbe5353e357ce487dd}{senderAddress}};}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{class_letter_a6c3e165be755b8d617c411727699b400}{receiverAddress}};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_letter_a484f966960ea6b857ea95cd0ebccb78c}{weight}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_letter}{Letter}}()\ :\ \mbox{\hyperlink{class_letter_abbfd18b90e2a07cbe5353e357ce487dd}{senderAddress}}(\textcolor{stringliteral}{"{}"{}}),\ \mbox{\hyperlink{class_letter_a6c3e165be755b8d617c411727699b400}{receiverAddress}}(\textcolor{stringliteral}{"{}"{}}),\ \mbox{\hyperlink{class_letter_a484f966960ea6b857ea95cd0ebccb78c}{weight}}(0)\ \{\}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_letter}{Letter}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_senderAddress,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_receiverAddress,\ \textcolor{keywordtype}{float}\ \_weight);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_letter}{Letter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_letter}{Letter}}\&\ initial);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_letter_acba8ddadd9974473aeb49375cbfe3f43}{\string~Letter}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_letter}{Letter}}\&\ \mbox{\hyperlink{class_letter_a6aa51cc79e5447409465f2ce8dff65d2}{operator\ =}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_letter}{Letter}}\&\ initial);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_letter_aae90c3a774c3f11a3d81bb1e7e737908}{printInfo}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_letter_ab0c7c2766b352daece692fe923254347}{getDeliveryPrice}}();}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_valuable_letter}{ValuableLetter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_letter}{Letter}}\ \{}
+\DoxyCodeLine{00096\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_valuable_letter_adaa90d634ded3b52a5de6ffe1b18d8c7}{price}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{class_valuable_letter_ac5251536746b1426f94c1857a7fa3033}{ValuableLetter}}()\ :\ \mbox{\hyperlink{class_letter}{Letter}}(),\ \mbox{\hyperlink{class_valuable_letter_adaa90d634ded3b52a5de6ffe1b18d8c7}{price}}(0)\ \{\}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_valuable_letter_ac5251536746b1426f94c1857a7fa3033}{ValuableLetter}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_senderAddress,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_receiverAddress,\ \textcolor{keywordtype}{float}\ \_weight,\ \textcolor{keywordtype}{float}\ \_price);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{class_valuable_letter_ac5251536746b1426f94c1857a7fa3033}{ValuableLetter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_valuable_letter}{ValuableLetter}}\&\ initial);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_valuable_letter}{ValuableLetter}}\&\ \mbox{\hyperlink{class_valuable_letter_af48104bf645b29e17abf972341675c20}{operator\ =}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_valuable_letter}{ValuableLetter}}\&\ initial);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_valuable_letter_a674ac92c1f820ae5d7e34bbb92e97b3a}{printInfo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_valuable_letter_a5828d7343fbbd18957a993452afc5dcb}{getAdditionalPayment}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_valuable_letter_ac895fde24b4ccf107e23bce582b46ad0}{getDeliveryPrice}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_mail_box}{MailBox}}\ \{}
+\DoxyCodeLine{00144\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00146\ \ \ \ \ std::vector<ValuableLetter>\ \mbox{\hyperlink{class_mail_box_a6f7971881f910c07dd49d94c16ad92b9}{arr}};}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_mail_box_a7e68febee0de5c29c64f960396f183e5}{len}};}
+\DoxyCodeLine{00149\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{class_mail_box}{MailBox}}(std::vector<ValuableLetter*>\ \_arr,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_mail_box_a7e68febee0de5c29c64f960396f183e5}{len}});}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_mail_box_ac38d8ba985695886e8b91c67ec030ecd}{\string~MailBox}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mail_box_a0ca13c98d754f6b0eed074f838e963da}{printLettersInfo}}();}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_mail_box_a6862dfef6f131a16dc7e2db38f7c4205}{getFullPrice}}();}
+\DoxyCodeLine{00172\ \};}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CLASSES\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+<map id="Letter" name="Letter">
+<area shape="rect" id="node1" title="Класс, описывающий заказное письмо" alt="" coords="23,5,157,200"/>
+<area shape="rect" id="node2" href="$class_valuable_letter.html" title="Класс, описывающий ценное письмо" alt="" coords="5,248,175,413"/>
+</map>

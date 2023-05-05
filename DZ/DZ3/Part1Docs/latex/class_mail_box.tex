@@ -1,0 +1,75 @@
+\hypertarget{class_mail_box}{}\doxysection{Класс Mail\+Box}
+\label{class_mail_box}\index{MailBox@{MailBox}}
+
+
+Класс, описывающий почтовый ящик для ценных писем  
+
+
+
+
+{\ttfamily \#include $<$classes.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mail_box_ac21e8c1d63970141e8744206e33eb1db}{Mail\+Box}} (std\+::vector$<$ \mbox{\hyperlink{class_valuable_letter}{Valuable\+Letter}} $\ast$ $>$ \+\_\+arr, int \mbox{\hyperlink{class_mail_box_a7e68febee0de5c29c64f960396f183e5}{len}})
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mail_box_ac38d8ba985695886e8b91c67ec030ecd}\label{class_mail_box_ac38d8ba985695886e8b91c67ec030ecd}} 
+{\bfseries $\sim$\+Mail\+Box} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_mail_box_a0ca13c98d754f6b0eed074f838e963da}{print\+Letters\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Вывод иформации \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mail_box_a6862dfef6f131a16dc7e2db38f7c4205}\label{class_mail_box_a6862dfef6f131a16dc7e2db38f7c4205}} 
+float {\bfseries get\+Full\+Price} ()
+\begin{DoxyCompactList}\small\item\em Расчёт полной стоимости отправки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_mail_box_a6f7971881f910c07dd49d94c16ad92b9}\label{class_mail_box_a6f7971881f910c07dd49d94c16ad92b9}} 
+std\+::vector$<$ \mbox{\hyperlink{class_valuable_letter}{Valuable\+Letter}} $>$ {\bfseries arr}
+\begin{DoxyCompactList}\small\item\em Ценные письма в std\+::vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mail_box_a7e68febee0de5c29c64f960396f183e5}\label{class_mail_box_a7e68febee0de5c29c64f960396f183e5}} 
+int {\bfseries len}
+\begin{DoxyCompactList}\small\item\em Количество писем \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, описывающий почтовый ящик для ценных писем 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_mail_box_ac21e8c1d63970141e8744206e33eb1db}\label{class_mail_box_ac21e8c1d63970141e8744206e33eb1db}} 
+\index{MailBox@{MailBox}!MailBox@{MailBox}}
+\index{MailBox@{MailBox}!MailBox@{MailBox}}
+\doxysubsubsection{\texorpdfstring{MailBox()}{MailBox()}}
+{\footnotesize\ttfamily Mail\+Box\+::\+Mail\+Box (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_valuable_letter}{Valuable\+Letter}} $\ast$ $>$}]{\+\_\+arr,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em \+\_\+arr} & -\/ указатели на ценные письма в std\+::vector \\
+\hline
+{\em len} & -\/ количество писем \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_mail_box_a0ca13c98d754f6b0eed074f838e963da}\label{class_mail_box_a0ca13c98d754f6b0eed074f838e963da}} 
+\index{MailBox@{MailBox}!printLettersInfo@{printLettersInfo}}
+\index{printLettersInfo@{printLettersInfo}!MailBox@{MailBox}}
+\doxysubsubsection{\texorpdfstring{printLettersInfo()}{printLettersInfo()}}
+{\footnotesize\ttfamily void Mail\+Box\+::print\+Letters\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод иформации 
+
+Вызывает процедуру вывода информации для каждого письма 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_8h}{classes.\+h}}\item 
+classes.\+cpp\end{DoxyCompactItemize}

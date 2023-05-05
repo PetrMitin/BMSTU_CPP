@@ -1,0 +1,113 @@
+\hypertarget{class_letter}{}\doxysection{Класс Letter}
+\label{class_letter}\index{Letter@{Letter}}
+
+
+Класс, описывающий заказное письмо  
+
+
+
+
+{\ttfamily \#include $<$classes.\+h$>$}
+
+
+
+Граф наследования\+:Letter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{class_letter__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_letter_a5f3653ef47c6b021946fd903432ef819}{Letter}} (const char $\ast$\+\_\+sender\+Address, const char $\ast$\+\_\+receiver\+Address, float \+\_\+weight)
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_letter_aae9f25ded7323f0effb71b5713124020}\label{class_letter_aae9f25ded7323f0effb71b5713124020}} 
+{\bfseries Letter} (const \mbox{\hyperlink{class_letter}{Letter}} \&initial)
+\begin{DoxyCompactList}\small\item\em Копирующий конструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_letter_acba8ddadd9974473aeb49375cbfe3f43}\label{class_letter_acba8ddadd9974473aeb49375cbfe3f43}} 
+virtual {\bfseries $\sim$\+Letter} ()
+\begin{DoxyCompactList}\small\item\em Виртуальный деструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_letter_a6aa51cc79e5447409465f2ce8dff65d2}\label{class_letter_a6aa51cc79e5447409465f2ce8dff65d2}} 
+\mbox{\hyperlink{class_letter}{Letter}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_letter}{Letter}} \&initial)
+\begin{DoxyCompactList}\small\item\em Переопределенный оператор присваивания \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_letter_aae90c3a774c3f11a3d81bb1e7e737908}{print\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Вывод иформации \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_letter_ab0c7c2766b352daece692fe923254347}{get\+Delivery\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Расчёт цены отправки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_letter_abbfd18b90e2a07cbe5353e357ce487dd}\label{class_letter_abbfd18b90e2a07cbe5353e357ce487dd}} 
+char $\ast$ {\bfseries sender\+Address}
+\begin{DoxyCompactList}\small\item\em Адрес отправителя \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_letter_a6c3e165be755b8d617c411727699b400}\label{class_letter_a6c3e165be755b8d617c411727699b400}} 
+char $\ast$ {\bfseries receiver\+Address}
+\begin{DoxyCompactList}\small\item\em Адрес получателя \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_letter_a484f966960ea6b857ea95cd0ebccb78c}\label{class_letter_a484f966960ea6b857ea95cd0ebccb78c}} 
+float {\bfseries weight}
+\begin{DoxyCompactList}\small\item\em Вес письма \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, описывающий заказное письмо 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_letter_a5f3653ef47c6b021946fd903432ef819}\label{class_letter_a5f3653ef47c6b021946fd903432ef819}} 
+\index{Letter@{Letter}!Letter@{Letter}}
+\index{Letter@{Letter}!Letter@{Letter}}
+\doxysubsubsection{\texorpdfstring{Letter()}{Letter()}}
+{\footnotesize\ttfamily Letter\+::\+Letter (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+sender\+Address,  }\item[{const char $\ast$}]{\+\_\+receiver\+Address,  }\item[{float}]{\+\_\+weight }\end{DoxyParamCaption})}
+
+
+
+Конструктор 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em \+\_\+sender\+Address} & -\/ адрес отправителя \\
+\hline
+{\em \+\_\+receiver\+Address} & -\/ адрес получателя \\
+\hline
+{\em \+\_\+weight} & -\/ вес письма \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_letter_ab0c7c2766b352daece692fe923254347}\label{class_letter_ab0c7c2766b352daece692fe923254347}} 
+\index{Letter@{Letter}!getDeliveryPrice@{getDeliveryPrice}}
+\index{getDeliveryPrice@{getDeliveryPrice}!Letter@{Letter}}
+\doxysubsubsection{\texorpdfstring{getDeliveryPrice()}{getDeliveryPrice()}}
+{\footnotesize\ttfamily float Letter\+::get\+Delivery\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Расчёт цены отправки 
+
+
+
+Переопределяется в \mbox{\hyperlink{class_valuable_letter_ac895fde24b4ccf107e23bce582b46ad0}{Valuable\+Letter}}.
+
+\mbox{\Hypertarget{class_letter_aae90c3a774c3f11a3d81bb1e7e737908}\label{class_letter_aae90c3a774c3f11a3d81bb1e7e737908}} 
+\index{Letter@{Letter}!printInfo@{printInfo}}
+\index{printInfo@{printInfo}!Letter@{Letter}}
+\doxysubsubsection{\texorpdfstring{printInfo()}{printInfo()}}
+{\footnotesize\ttfamily void Letter\+::print\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Вывод иформации 
+
+Выводит адреса отправителя и получателя, вес и цену отправки 
+
+Переопределяется в \mbox{\hyperlink{class_valuable_letter_a674ac92c1f820ae5d7e34bbb92e97b3a}{Valuable\+Letter}}.
+
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classes_8h}{classes.\+h}}\item 
+classes.\+cpp\end{DoxyCompactItemize}
