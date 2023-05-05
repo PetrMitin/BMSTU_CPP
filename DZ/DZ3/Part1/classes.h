@@ -1,65 +1,174 @@
 #ifndef CLASSES_H
 #define CLASSES_H
 
-#include <string.h>
+#include <vector>
 
+/*! @file
+@startuml
+    class Letter {
+        +senderAddress
+        +receiverAddress
+        +weight
+        +Letter()
+        +Letter(const char* _senderAddress, const char* _receiverAddress, float _weight)
+        +Letter(const Letter& initial)
+        +virtual ~Letter()
+        +Letter& operator =(const Letter& initial)
+        +virtual void printInfo()
+        +virtual float getDeliveryPrice()
+    }
+
+    class ValuableLetter {
+        +price
+        +ValuableLetter()
+        +ValuableLetter(const char* _senderAddress, const char* _receiverAddress, float _weight, float _price)
+        +ValuableLetter(const ValuableLetter& initial)
+        +ValuableLetter& operator =(const ValuableLetter& initial)
+        +void printInfo() override
+        +float getAdditionalPayment()
+        +float getDeliveryPrice() override
+    }
+
+    class MailBox {
+        +vector<ValuableLetter> arr
+        +len
+        +MailBox(std::vector<ValuableLetter*> _arr, int len)
+        +~MailBox()
+        +void printLettersInfo()
+        +float getFullPrice()
+    }
+
+    Letter <|-- ValuableLetter
+    MailBox o-- ValuableLetter
+@enduml
+*/
+
+/*! @brief Класс, описывающий заказное письмо */
 class Letter {
 protected:
+    /*! @brief Адрес отправителя */
     char* senderAddress;
+    /*! @brief Адрес получателя */
     char* receiverAddress;
-    int weight;
+    /*! @brief Вес письма */
+    float weight;
 
 public:
     Letter() : senderAddress(""), receiverAddress(""), weight(0) {}
 
-    Letter(const char* _senderAddress, const char* _receiverAddress, int _weight) : weight(_weight) {
-        strcpy(senderAddress, _senderAddress);
-        strcpy(receiverAddress, _receiverAddress);
-    }
+    /*!
+     *  @brief Конструктор
+     *  @param _senderAddress - адрес отправителя
+     *  @param _receiverAddress - адрес получателя
+     *  @param _weight - вес письма
+    */
+    Letter(const char* _senderAddress, const char* _receiverAddress, float _weight);
 
-    Letter(const Letter &initial) {
-        weight = initial.weight;
-        strcpy(senderAddress, initial.senderAddress);
-        strcpy(receiverAddress, initial.receiverAddress);
-    }
+    /*!
+     *  @brief Копирующий конструктор
+    */
+    Letter(const Letter& initial);
 
-    Letter& operator =(const Letter &initial) {
+    /*!
+     *  @brief Виртуальный деструктор
+    */
+    virtual ~Letter();
 
-    }
+    /*!
+     *  @brief Переопределенный оператор присваивания
+    */
+    Letter& operator =(const Letter& initial);
 
-    ~Letter() {
-        delete [] senderAddress;
-        delete [] receiverAddress;
-    }
+    /*!
+     *  @brief Вывод иформации
+     *  @details Выводит адреса отправителя и получателя, вес и цену отправки
+    */
+    virtual void printInfo();
+
+    /*!
+     *  @brief Расчёт цены отправки
+    */
+    virtual float getDeliveryPrice();
 };
 
+/*! @brief Класс, описывающий ценное письмо */
 class ValuableLetter : public Letter {
 protected:
-    int price;
+    /*! @brief Ценность письма */
+    float price;
 
 public:
+    /*!
+     *  @brief Конструктор без параметров
+    */
     ValuableLetter() : Letter(), price(0) {}
 
-    ValuableLetter(const char* _senderAddress, const char* _receiverAddress, int _weight, int _price)
-        : Letter(_senderAddress, _receiverAddress, _weight), price(_price) {}
+    /*!
+     *  @brief Конструктор
+     *  @param _senderAddress - адрес отправителя
+     *  @param _receiverAddress - адрес получателя
+     *  @param _weight - вес письма
+     *  @param _price - ценность письма
+    */
+    ValuableLetter(const char* _senderAddress, const char* _receiverAddress, float _weight, float _price);
 
-    ValuableLetter& operator =(const ValuableLetter &initial) {
+    /*!
+     *  @brief Копирующий конструктор
+    */
+    ValuableLetter(const ValuableLetter& initial);
 
-    }
+    /*!
+     *  @brief Переопределенный оператор присваивания
+    */
+    ValuableLetter& operator =(const ValuableLetter& initial);
+
+    /*!
+     *  @brief Вывод иформации
+     *  @details Выводит адреса отправителя и получателя, вес и цену отправки с учётом ценности письма
+    */
+    void printInfo() override;
+
+    /*!
+     *  @brief Расчёт дополнительной оплаты за ценность письма
+    */
+    float getAdditionalPayment();
+
+    /*!
+     *  @brief Расчёт цены отправки
+    */
+    float getDeliveryPrice() override;
 };
 
+/*! @brief Класс, описывающий почтовый ящик для ценных писем */
 class MailBox {
 protected:
-    ValuableLetter* arr;
+    /*! @brief Ценные письма в std::vector */
+    std::vector<ValuableLetter> arr;
+    /*! @brief Количество писем */
+    int len;
 public:
-    MailBox(ValuableLetter* _arr, int len) {
-        arr = new ValuableLetter[len];
-        for (int i = 0; i < len; i++) arr[i] = _arr[i];
-    }
+    /*!
+     *  @brief Конструктор
+     *  @param _arr - указатели на ценные письма в std::vector
+     *  @param len - количество писем
+    */
+    MailBox(std::vector<ValuableLetter*> _arr, int len);
 
-    ~MailBox() {
-        delete [] arr;
-    }
+    /*!
+     *  @brief Деструктор
+     */
+    ~MailBox();
+
+    /*!
+     *  @brief Вывод иформации
+     *  @details Вызывает процедуру вывода информации для каждого письма
+    */
+    void printLettersInfo();
+
+    /*!
+     *  @brief Расчёт полной стоимости отправки
+    */
+    float getFullPrice();
 };
 
 #endif // CLASSES_H
