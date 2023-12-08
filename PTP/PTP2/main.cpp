@@ -1,8 +1,6 @@
 #include <iostream>
 #include "classes.h"
-
 using namespace std;
-
 void getNotation(int &notation) {
     cout  << "In which notation do you want to play? (Enter corresponding digit)" << endl;
     cout << "1. Octal" << endl;
@@ -11,7 +9,6 @@ void getNotation(int &notation) {
     cin >> notation;
     cout << '\n';
 }
-
 int main()
 {
     cout << "Guess the Number game" << endl;

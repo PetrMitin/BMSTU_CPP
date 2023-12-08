@@ -152,7 +152,7 @@ public:
      *  @param _arr - указатели на ценные письма в std::vector
      *  @param len - количество писем
     */
-    MailBox(std::vector<ValuableLetter*> _arr, int len);
+    MailBox(std::vector<ValuableLetter*> _arr);
 
     /*!
      *  @brief Деструктор

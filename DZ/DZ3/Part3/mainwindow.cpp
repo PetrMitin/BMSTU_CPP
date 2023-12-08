@@ -30,7 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(this->createItemDialog, SIGNAL(itemSubmitted()), this, SLOT(createItem()));
     connect(this->ui->pushButton_2, SIGNAL(clicked(bool)), this->deleteItemDialog, SLOT(show()));
     connect(this->deleteItemDialog, SIGNAL(itemDeleted()), this, SLOT(deleteItem()));
-    connect(this->ui->tableWidget, SIGNAL(itemChanged(QTableWidgetItem*)), this, SLOT(changeUpdatedItems()));
     connect(this->ui->pushButton_3, SIGNAL(clicked(bool)), this, SLOT(updateItems()));
     connect(this->ui->pushButton_4, SIGNAL(clicked(bool)), this, SLOT(close()));
 }

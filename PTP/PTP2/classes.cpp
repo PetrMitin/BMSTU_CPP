@@ -48,9 +48,7 @@ void Game<number>::makeMove() {
             else cout << "_ ";
         }
         cout << endl;
-    } else {
-       cout << "Mimo!" << endl;
-    }
+    } else cout << "Mimo!" << endl;
     Game::numberOfMoves++;
     cout << endl;
 }

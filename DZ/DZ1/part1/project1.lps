@@ -8,7 +8,7 @@
       <Unit>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="15" Y="13"/>
         <UsageCount Value="43"/>
         <Loaded Value="True"/>
@@ -30,19 +30,17 @@
         <Filename Value="figure.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Figure"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="52"/>
         <CursorPos X="54" Y="72"/>
         <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\part2\set_interactions.lfm"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="38"/>
+        <HasResources Value="True"/>
+        <EditorIndex Value="-1"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
     </Units>

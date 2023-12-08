@@ -19,7 +19,7 @@ int main()
     arr.push_back(l2);
     arr.push_back(l3);
     arr.push_back(l4);
-    MailBox* mailbox = new MailBox(arr, 4);
+    MailBox* mailbox = new MailBox(arr);
     arr.clear();
     mailbox->printLettersInfo();
     cout << "Full price: " << mailbox->getFullPrice() << endl;

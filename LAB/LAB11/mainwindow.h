@@ -41,9 +41,9 @@ private:
     const float xLeftBound = M_PI_4 * -1;
     const float xRightBound = M_PI_4 * 3;
     const float precision = 0.01;
-    float currX = 0;
-    float currY = 0;
-    float currZ = 0;
+    float currX = -10;
+    float currY = -10;
+    float currZ = -10;
 
     QStringList getExistingMarksOptions();
 

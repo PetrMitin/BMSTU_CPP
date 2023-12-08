@@ -77,7 +77,7 @@ float ValuableLetter::getDeliveryPrice() {
     return Letter::getDeliveryPrice() + ValuableLetter::getAdditionalPayment();
 }
 
-MailBox::MailBox(vector<ValuableLetter*> _arr, int _len) : len(_len) {
+MailBox::MailBox(vector<ValuableLetter*> _arr) {
     for (vector<ValuableLetter*>::iterator i = _arr.begin(); i != _arr.end(); i++) {
         ValuableLetter curr = *(*i);
         MailBox::arr.push_back(curr);

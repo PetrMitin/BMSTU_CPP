@@ -47,7 +47,7 @@ private:
     void makeMove();
 
 public:
-    Game() {data = new number; delete [] areDigitsGuessed;}
+    Game() {this->data = new number();}
 
     ~Game() {delete data;}
 

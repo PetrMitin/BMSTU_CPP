@@ -1,0 +1,13 @@
+release/addmatchdialog.o
+release/deletematchdialog.o
+release/graphframe.o
+release/main.o
+release/mainwindow.o
+release/match.o
+release/matchescontroller.o
+release/winsdialog.o
+release/moc_addmatchdialog.o
+release/moc_deletematchdialog.o
+release/moc_graphframe.o
+release/moc_mainwindow.o
+release/moc_winsdialog.o

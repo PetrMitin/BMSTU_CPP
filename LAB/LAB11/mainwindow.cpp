@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     graph->axisX()->setRange(-0.8, 2.4);
     graph->axisY()->setRange(-1, 1);
     graph->axisZ()->setRange(-1, 1);
+    delete this->ui->surfaceWidget;
     this->ui->surfaceWidget = QWidget::createWindowContainer(graph, this);
     this->ui->surfaceWidget->setGeometry(QRect(0, 100, 700, 500));
     //this->generatePointsFile();
@@ -130,7 +131,7 @@ void MainWindow::setMark(float x, float y, float z) {
 }
 
 QString MainWindow::saveMark(float x, float y, float z) {
-    QString newMarkName = QInputDialog::getText(this,"Create mark", "Enter name of the new mark");
+    QString newMarkName = QInputDialog::getText(this, "Create mark", "Enter name of the new mark");
     QString result = "";
     if (newMarkName.length()) {
         QFile marksFile(this->marksFilepath);
@@ -155,7 +156,7 @@ void MainWindow::saveCurrentMark() {
 }
 
 void MainWindow::deleteMark() {
-    QString markToDeleteName = QInputDialog::getText(this,"Delete mark", "Enter name of mark to delete");
+    QString markToDeleteName = QInputDialog::getText(this, "Delete mark", "Enter name of mark to delete");
     if (markToDeleteName.length()) {
         bool isFound = false;
         QFile marksFile(this->marksFilepath);

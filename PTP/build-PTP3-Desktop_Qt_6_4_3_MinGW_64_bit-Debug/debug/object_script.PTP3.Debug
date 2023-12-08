@@ -1,0 +1,13 @@
+debug/addmatchdialog.o
+debug/deletematchdialog.o
+debug/graphframe.o
+debug/main.o
+debug/mainwindow.o
+debug/match.o
+debug/matchescontroller.o
+debug/winsdialog.o
+debug/moc_addmatchdialog.o
+debug/moc_deletematchdialog.o
+debug/moc_graphframe.o
+debug/moc_mainwindow.o
+debug/moc_winsdialog.o

@@ -4,6 +4,7 @@
 #include <iterator>
 #include <algorithm>
 #include <QSet>
+#include <chrono>
 
 using namespace std;
 
@@ -114,8 +115,19 @@ void solveWithQSet() {
 }
 
 int main() {
+    auto start = std::chrono::high_resolution_clock::now();
     solveWithStdSet();
+    auto stop =  std::chrono::high_resolution_clock::now();
+    auto duration =  std::chrono::duration_cast< std::chrono::microseconds>(stop-start);
+    cout << duration.count() << endl;
+
     cout << endl;
+
+    start =  std::chrono::high_resolution_clock::now();
     solveWithQSet();
+    stop =  std::chrono::high_resolution_clock::now();
+    duration =  std::chrono::duration_cast<std::chrono::microseconds>(stop-start);
+    cout << duration.count() << endl;
+
     return 0;
 }

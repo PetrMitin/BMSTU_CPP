@@ -43,7 +43,7 @@ public:
         Element* c = first;
         do {
             if(NumElement* curr = dynamic_cast<NumElement*>(c)) if(curr->val == el) curr->include();
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
     }
 
@@ -51,7 +51,7 @@ public:
         Element* c = first;
         do {
             if(CharElement* curr = dynamic_cast<CharElement*>(c)) if(curr->val == el) curr->include();
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
     }
 
@@ -59,7 +59,7 @@ public:
         Element* c = first;
         do {
             if(NumElement* curr = dynamic_cast<NumElement*>(c)) if(curr->val == el) curr->exclude();
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
     }
 
@@ -67,7 +67,7 @@ public:
         Element* c = first;
         do {
             if(CharElement* curr = dynamic_cast<CharElement*>(c)) if(curr->val == el)  curr->exclude();
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
     }
 
@@ -76,7 +76,7 @@ public:
         Element* c = first;
         do {
             if(NumElement* curr = dynamic_cast<NumElement*>(c)) if(curr->val == el) result = true;
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
         return result;
     }
@@ -86,7 +86,7 @@ public:
         Element* c = first;
         do {
             if(CharElement* curr = dynamic_cast<CharElement*>(c)) if(curr->val == el) result = true;
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
         return result;
     }
@@ -98,7 +98,7 @@ public:
                 if (curr->isIncluded) cout << curr->val << endl;
             }
             else if (CharElement* curr = dynamic_cast<CharElement*>(c)) if (curr->isIncluded) cout << curr->val << endl;
-            c = c->next;
+            c = c ? c->next : nullptr;
         } while(c);
     }
 
